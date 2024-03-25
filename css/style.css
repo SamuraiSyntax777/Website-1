@@ -1,3 +1,7 @@
+body {
+    background-color:  #fdcc04;
+}
+
 
 * {
     box-sizing: border-box;
@@ -30,3 +34,95 @@ nav a {
     color: black;
     padding: 0 1.5rem;
 }
+
+.hero {
+    background-color: #fdcc04;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding:3rem calc((100vw - 1300px) / 2 );
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #000;
+    padding: 0 2rem;
+
+}
+
+.column-left h1 {
+    margin-bottom: rem;
+    font-size: 5rem;
+    max-width: 6ch;
+}
+
+.column-left p {
+    text-align: left; /* Aligns the text to the left */
+    font-size: 30px; /* Adjusts the font size */
+    line-height: 1.6; /* Adjusts the spacing between lines of text */
+    margin-bottom: 20px; /* Adds space below the paragraph */
+    max-width: 20%; /* Limits the width of the paragraph */
+    margin-left: left; /* Centers the paragraph by automatically adjusting the left margin */
+}
+
+button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.colunm-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 0rem 2rem;
+
+
+}
+
+.hero-image {
+    width: 30%;
+    height: 30%;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    
+    }
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
