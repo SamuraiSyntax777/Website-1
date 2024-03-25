@@ -23,7 +23,7 @@ nav {
 
 .logo {
     color: black;
-    font-size: 1.5rem;
+    font-size: 5.5rem;
     font-weight: bold;
     font-style: italic;
     padding: 0 2rem;
@@ -31,7 +31,7 @@ nav {
 }
 nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 0 1.5rem;
 }
 
@@ -112,17 +112,84 @@ button:hover {
     }
 }
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-  }
-  
-  /* Clear floats after image containers */
-  .row::after {
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdcc04; /* Im going to Adjust the background color if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px; /* Prevents the form from stretching across the page */
+}
+
+h1, p {
+    text-align: center; /* Centers the text within the form */
+}
+
+input[type=text], input[type=password] {
+    width: 100%; /* Full width */
+    padding: 15px;
+    margin: 10px 0 20px;
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box; /* Adjusts box-sizing */
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ffffff;
+    outline: none;
+}
+
+hr {
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #000000;
+    color: rgb(248, 191, 4);
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: auto; /* Adjust button width as needed */
+    display: block; /* Makes the button block level */
+    margin: 10px auto; /* Centers button horizontally */
+    border-radius: 4px;
+}
+
+.cancelbtn {
+    background-color: #000000;
+}
+
+.cancelbtn, .signupbtn {
+    float: none; /* Avoids floating buttons */
+    width: 45%; /* Adjusts button width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
-  }
-  
+}
+
+@media screen and (max-width: 768px) {
+    .cancelbtn, .signupbtn {
+        width: 100%; /* Full width buttons on smaller screens */
+    }
+}
+
